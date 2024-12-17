@@ -1,0 +1,26 @@
+Initilization state:
+    - Load credentials 
+    - Open browser
+    - Navigate to website 
+    - Log in securely 
+
+Processing state:
+    - Download Excel file
+    - Parse Excel rows 
+    - Submit form for each row
+
+Output state: 
+    - Take screenshot 
+    - Export results to pdf
+
+End result:
+    - Log out and close browser    
+
+
+Justification for Architecture: 
+
+    1. Modular Design: Each state is encapsulated in functions, making the code reusable, clear, and easier to debug or update.
+    2. Error Handling: The try-except-finally structure ensures errors are logged, and resources like the browser are safely closed, avoiding system crashes.
+    3. Secure Credentials: Credentials are loaded from an external file, avoiding hardcoding and enabling future upgrades to more secure storage methods like environment variables.
+    4. Scalability: The bot dynamically processes Excel data row by row, supporting changes to the data size or structure without modifications.
+    5. Maintainability: Logs provide a detailed trail for debugging, while modular design simplifies updates or feature additions.
